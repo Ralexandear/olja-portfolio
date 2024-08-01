@@ -6,19 +6,224 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
   <title>Olvishi</title>
 </head>
 <body>
-  <nav>
-    <div class="navbar">
-
+  <nav class="aa">
+    <div class="navbar card radius-10">
+      <ul>
+        <li> <a href="#">Проекты</a> </li>
+        <li> <a href="#">Услуги</a> </li>
+        <li> <a href="#">Этапы работы</a> </li>
+        <li> <a href="#">Контакты</a> </li>
+      </ul>
     </div>
   </nav>
-  <section></section>
-  <section></section>
-  <section></section>
-  <section></section>
-  <section></section>
+  <section class="about-me">
+    <div class="about-me__box">
+      <div class="about-me__wrapper left-wrapper">
+        <div class="card about-me__welcome-card">
+          <!-- <div class="card about-me__align-wrapper"> -->
+            <div class="about-me__tags">
+              <div class="about-me__tag radius-10">
+                web design
+              </div>
+           
+              <div class="about-me__tag radius-10">
+                ux.ui
+              </div>
   
+              <div class="about-me__tag radius-10">
+                graphic design
+              </div>
+            </div>
+            
+              <h1 class="about-me__welcome-text">
+                привет!<br>
+                <span>я Оля, веб-дизайнер</span>
+              </h1>
+              <h3 class="about-me__welcome-note fs-18">
+                помогаю создавать удобные,<br>отзывчивые сайты
+              </h3>          
+  
+            <button class="about-me__discuss-btn radius-20 fs-18" >
+              Обсудить проект
+            </button>
+          <!-- </div> -->
+        </div>
+
+        <div class="about-me__pretentios-notes card">
+          <p class="about-me__pretentios-note fs-18">
+            уметь тонко чувствовать другого человека, его настроения и желания, а также видеть прекрасное во всём - мои главные инструменты в работе
+          </p>
+          <p class="about-me__pretentios-note fs-18">
+            это значит, что ты будешь услышан, понят, а твои задумки<br>по-максимуму реализованы
+          </p>
+        </div>
+      </div>
+      <div class="about-me__wrapper right-wrapper">
+        <div class="card about-me__photo-wrapper">
+          <img src="./static/img/welcome_photo.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div class="card projects__card">
+      <div class="projects__wrapper">
+        <h2 class="projects__title">некоторые проекты</h2>
+        <div class="projects__slides-wrapper">
+          <div class="projects__slide radius-30">
+            <img class="projects__slide-img" src="./static/img/slide_psycho.png" alt="">
+            <h3 class="projects__slide-title">01/ лендинг для психотерапевта</h3>
+          </div>
+          <div class="projects__slide  radius-30">
+            <img class="projects__slide-img" src="./static/img/slide_programmer.png" alt="">
+            <h3 class="projects__slide-title">02/ сайт-визитка для мужа-кодера</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="services__header-card card radius-30">
+      <h2 class="services__header-title">услуги</h2>
+    </div>
+    <div class="services__slide-wrapper">
+      <div class="services__slide radius-30 card">
+        <h4 class="services__slide-title">одностраничник</h4>
+        <ul class="services__slide-list">
+          <li>лендинг</li>
+          <li>лонгрид</li>
+          <li>сайт-визитка</li>
+          <li>промо</li>
+        </ul>
+        <p class="services__slide-price">от 30.000р</p>
+      </div>
+      <div class="services__slide radius-30 card">
+        <h4 class="services__slide-title">многостраничник</h4>
+        <ul class="services__slide-list">
+          <li>интернет магазин</li>
+          <li>сайт для компании</li>
+          <li>сайт для услуг</li>
+          <li></li>
+        </ul>
+        <p class="services__slide-price">от 50.000р</p>
+      </div>
+      <div class="services__slide radius-30 card">
+        <h4 class="services__slide-title">прочие услуги</h4>
+        <ul class="services__slide-list">
+          <li>логотипы</li>
+          <li>визитки</li>
+          <li>открытки</li>
+          <li>другие печатные материалы</li>
+        </ul>
+        <p class="services__slide-price">по запросу</p>
+      </div>
+      <div class="services__slide radius-30 card">
+        <h4 class="services__slide-title">консультация</h4>
+        <ul class="services__slide-list">
+          <li>когда все очень</li>
+          <li>интересно,</li>
+          <li>но ничего</li>
+          <li>непонятно</li>
+        </ul>
+        <p class="services__slide-price">500р/час</p>
+      </div>
+    </div>
+    <div class="services__slide-wrapper card">
+      <div class="services__slide card">
+        <h4 class="services__slide-title">дизайн сайта<br>без верски</h4>
+      </div>
+      <div class="services__slide" id="service__website-design">
+        <ul class="services__slide-list">
+          <li>подготовлю макет:</li>
+          <li>проведу анализ ЦА и конкурентов ниши</li>
+          <li>создам прототип и дизайн</li>
+          <li>сделаю адаптацию под телефон и планшет</li>
+          <li>проставлю коментарии по макету<br>для верстальщика</li>
+        </ul>
+        <p class="services__slide-price">от 20.000р</p>
+      </div>
+      <div class="services__slide card" hidden></div>
+      <div class="services__slide card" hidden></div>
+    </div>
+  </section>
+
+  <section class="stages">
+    <div class="stages__card card">
+      <h2 class="stages__title">этапы работы</h2>
+      <ul class="stages__list">
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          знакомство
+        </li>
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          аналитика
+        </li>
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          поиск идей
+        </li>
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          прототипирование
+        </li>
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          дизайн и адаптация
+        </li>
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          верстка
+        </li>
+        <li class="stages__list-element">
+          <span class="stages__list-element-number"></span>
+          настройка и запуск сайта
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="contacts__row-wrapper">
+      <div class="contacts__wrapper left-wrapper card">
+        <h2 class="contacts__title">создадим прекрасное вместе?</h2>
+        <p class="contacts__description">для обсуждения проекта свяжись со мной<br>любым удобным способом</p>
+        <ul class="contacts__list">
+          <li><a href="">telegram</a></li>
+          <li><a href="">whatsapp</a></li>
+          <li><a href="mailto:saaamoilova@gmail.com">e-mail</a></li>
+        </ul>
+      </div>
+      <div class="contacts__wrapper right-wrapper card photo-wrapper">
+        <img src="./static/img/contact_photo.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="footer__wrapper card">
+      <div class="footer__card-half">
+        <p class="footer__copyrights">© 2023 Все права защищены.  Самойлова Оля | Сайт-визитка</p>
+        <a href="#" class="footer__politics">Политика конфиденциальности</a>
+      </div>
+      <div class="footer__card-half">
+        <nav class="footer__navbar">
+          <ul class="footer__navbar-list">
+            <li><a href="#">проекты</a></li>
+            <li><a href="#">услуги</a></li>
+            <li><a href="#">этапы работы</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <script src="./js/index.js"></script>
 </body>
 </html>
