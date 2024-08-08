@@ -1,0 +1,33 @@
+@import '../_vars'
+
+.projects
+    &__title
+        margin-bottom: 20px
+    &__card
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        flex-wrap: wrap
+
+    &__slides-wrapper
+        display: flex
+        flex-direction: column
+        gap: 10px
+        // justify-content: space-evenly
+
+    &__slide
+        width: 100%
+        position: relative
+
+        &-img
+            width: 100%
+            object-fit: cover
+
+        &-title
+            position: absolute
+            top: 15px
+            left: 15px
+            font-weight: 600
+            font-size: $fs10

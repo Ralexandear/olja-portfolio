@@ -1,8 +1,7 @@
-@import './vars'
+@import './_vars'
 
 *
     box-sizing: border-box
-
 
 body
     background: $bg_color
@@ -23,12 +22,10 @@ p
     word-break: normal
     line-height: 120%
 
-
 h2
     font-size: 50px
     line-height: 0px
     line-height: 120%
-
 
 h3
     font-size: 18px
@@ -41,7 +38,6 @@ a
 img
     display: block
     object-fit: cover
-
 
 .card
     background: $card_color
@@ -59,18 +55,12 @@ img
 .radius-30
     border-radius: 30px
 
-
-
-    
-
 .navbar
     width: 100%
     height: 50px
     display: flex
     align-items: center
     justify-content: center
-
-
 
     // & ul
     //     display: inline
@@ -83,7 +73,7 @@ img
 
 .left-wrapper
     width: 720px
-    
+
 .right-wrapper
     width: 460px
 
@@ -103,8 +93,6 @@ img
         display: flex
         justify-content: space-between
         flex-wrap: wrap-reverse
-    
-
 
     &__tags
         display: flex
@@ -121,8 +109,6 @@ img
 
         &:last-child
             margin: 0
-    
-      
 
     &__welcome
         &-card
@@ -137,27 +123,23 @@ img
             & span
                 font-size: 50px
                 font-weight: 500
-        
+
         &-note
             margin-bottom: 60px
 
     &__discuss-btn
         width: 100%
         height: 90px
-        
+
         background: $bg_color
         border-width: 0
         color: $card_color
         font-weight: 500
 
     &__pretentios-notes
-        min-height: 315px
         display: flex
         flex-direction: column
-        padding-left: 50px
         justify-content: center
-
-
 
     &__pretentios-note
         margin-bottom: 40px
@@ -172,13 +154,12 @@ img
         position: sticky
         top: 20px
 
-
         & img
             display: block
             max-width: 410px
             height: auto
             object-fit: cover
-        
+
 .projects
     &__card
         height: 610px
@@ -207,7 +188,7 @@ img
 
         &-img
             height: 100%
-        
+
         &-title
             position: absolute
             top: 0
@@ -216,7 +197,6 @@ img
             padding-left: 30px
             padding-top: 50px
             font-weight: 500
-    
 
 .services
     &__header
@@ -234,7 +214,7 @@ img
         flex-direction: row
         justify-content: space-between
         margin-bottom: 20px
-    
+
     &__slide
         height: 100%
         padding: 50px 40px
@@ -250,17 +230,16 @@ img
 
         &-list
             line-height: 120%
-            
+
             & li
                 font-size: 16px
-                
+
                 &:first-child::before
                     content: "/"
 
     &__design-card
         height: 300px
         background: black
-
 
 .stages
     &__card
@@ -273,10 +252,10 @@ img
         &-element
             font-size: 18px
             margin-bottom: 35px
-            
+
             &:last-child
                 margin: 0
-            
+
             &-number
                 font-size: 50px
                 font-weight: 600
@@ -287,7 +266,7 @@ img
         display: flex
         flex-direction: row
         justify-content: space-between
-        
+
     &__wrapper
         &.right-wrapper img
             width: 420px
@@ -311,7 +290,6 @@ img
         height: 250px
         display: flex
 
-
     &__card-half
         padding: 75px 50px
         width: 50%
@@ -324,7 +302,7 @@ img
             &:last-child
                 margin: 0
 
-    &__politics 
+    &__politics
         text-decoration: underline
 
     &__navbar
@@ -337,18 +315,13 @@ img
             & a
                 font-size: 18px
 
-
-
-
-
 #service__website-design
     padding-right: 0
     overflow: visible
     white-space: nowrap
     z-index: 1
     width: auto
-    
+
     & ul li
         &:not(:first-child)::before
             content: "- "
-      

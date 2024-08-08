@@ -1,0 +1,22 @@
+@import '../_vars'
+
+.contacts
+    &__title
+        margin-bottom: 10px
+
+    &__wrapper
+        &.right-wrapper
+            display: none
+
+        &.left-wrapper
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 10px
+
+    &__list li
+        &:last-child
+            margin: 0
+        & a
+            font-size: $fs10
+            text-decoration: underline

@@ -1,0 +1,64 @@
+
+@import '../_vars'
+
+#design-service
+    min-height: 250px
+    
+    &-slide
+        height: auto
+        padding-right: 0
+        width: auto
+        z-index: 1
+        width: 60%
+        padding: 0
+
+    &-title
+        width: 48px
+        padding: 0
+
+        & ul li
+            &:not(:first-child)::before
+                content: "- "
+
+.services
+    &__header
+        &-card
+
+    &__slide
+        // height: 153px
+        width: 48.6%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        // margin-right: 10px
+
+        &:nth-child(even)
+            margin-right: 0
+
+        &-wrapper
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+
+        &-row
+            display: flex
+
+        &-title
+            margin-bottom: 20px
+        &-list
+            margin-bottom: 20px
+
+        &-title, &-price
+            font-weight: 600
+            font-size: $fs10
+
+        &-list
+            & li
+                font-size: $fs10
+
+                &:first-child::before
+                    content: "/"
+
+.empty-card
+    display: none

@@ -1,0 +1,177 @@
+@import '../_vars'
+
+.about-me
+    &__box
+        display: flex
+        flex-direction: column
+        position: relative
+        // gap: 10px
+
+    &__tags
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        position: absolute
+        top: 50px
+        right: 6px
+        gap: 10px
+        z-index: 1
+
+        @media (min-width: 340px)
+            padding-right: 20px
+
+    &__tag
+        white-space: nowrap
+        padding: 5px 12px
+        border-color: $bg_color
+        border-width: 1px
+        border-style: solid
+        font-size: $fs10
+        text-align: right
+        border-radius: 5px
+
+        &#ux-tag
+            order: 1
+
+    &__welcome
+
+        &-text
+            margin-top: 0
+            padding-top: 233px
+            font-size: 12px
+            margin-bottom: 7px
+            line-height: 120%
+
+            @media (min-width: 380px)
+                padding-top: 260px
+
+            @media (min-width: 400px)
+                padding-top: 280px
+
+            @media (min-width: 420px)
+                padding-top: 300px
+
+            & span
+                font-size: $fs18
+                font-weight: 500
+
+        &-note
+            margin-bottom: 30px
+            font-size: $fs10
+
+    &__discuss-btn
+        width: 100%
+        height: 50px
+        border-radius: 15px
+        background: $bg_color
+        border-width: 0
+        color: $card_color
+        font-weight: 500
+
+    &__pretentios-notes
+        // padding: 15px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        // justify-content: space-evenly
+
+    &__pretentios-note
+        margin-top: 0
+        margin-bottom: 18px
+        &:last-child
+            margin: 0
+
+    &__photo-wrapper
+        height: 212px
+        display: flex
+        justify-content: center
+        position: absolute
+        top: 30px
+        left: 20px
+        padding: 0
+
+        & img
+            display: block
+            width: 100%
+            max-width: 410px
+            height: auto
+            object-fit: cover
+
+        @media (min-width: 380px)
+            height: 240px
+
+        @media (min-width: 400px)
+            height: 260px
+
+        @media (min-width: 420px)
+            height: 280px
+
+@media (min-width: 1200px)
+    .about-me
+        &__box
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: wrap-reverse
+
+        &__tags
+            position: static
+            display: flex
+            flex-direction: row
+            margin-bottom: 40px
+
+        &__tag
+            padding: 15px 35px
+            font-size: $fs12
+            text-align: right
+            border-radius: 10px
+            margin-right: 10px
+
+            &:last-child
+                margin: 0
+
+        &__welcome
+            &-card
+                height: 620px
+
+            &-text
+                margin-top: 0
+                padding-top: 0
+                font-size: 12px
+                margin-bottom: 7px
+                line-height: 120%
+                font-size: 40px
+
+
+
+                & span
+                    font-size: $fs50
+                    font-weight: 500
+
+            &-note
+                margin-bottom: 60px
+                font-size: $fs18
+
+        &__discuss-btn
+            width: 100%
+            height: 90px
+            border-radius: 20px
+            font-size: 18px
+
+        &__pretentios-notes
+      
+
+        &__pretentios-note
+            margin-bottom: 40px
+            &:last-child
+                margin: 0
+
+        &__photo-wrapper
+            top: 0
+            left: 0
+            height: 620px
+            display: flex
+            padding: 20px 0
+            justify-content: center
+            position: sticky
+            top: 20px

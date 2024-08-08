@@ -1,0 +1,68 @@
+@import '../_vars'
+@import './reset'
+
+*
+    box-sizing: border-box
+    line-height: 120%!important
+    font-family: Comfortaa, sans-serif!important
+
+body
+    background: $bg_color
+    background-image: url("../static/img/background.png")
+    color: $black_color
+    overflow-x: hidden
+    max-width: 420px
+    min-width: 320px
+    margin: 0 auto
+    padding: 10px
+
+    @media (min-width: 768px)
+        max-width: 1200px
+
+    @media (min-width: 1200px)
+        padding: 0
+
+
+p
+    font-size: $fs10
+
+h2, h3
+    font-size: $fs18
+
+a
+    text-decoration: none
+    color: $black_color
+    font-size: $fs18
+
+img
+    display: block
+    object-fit: cover
+
+.card
+    background: $card_color
+    border-radius: 20px
+    margin-bottom: 10px
+    padding: 30px 20px
+
+@media (min-width: 760px)
+    .left-wrapper
+        width: 60%
+
+    .right-wrapper
+        width: 38.3%
+
+//     .card
+//         background: $card_color
+//         border-radius: 30px
+//         margin-bottom: 20px
+//         padding: 75px 50px
+
+@media (min-width: 1200px)
+    h2, h3
+        font-size: $fs50
+
+    .card
+        background: $card_color
+        border-radius: 30px
+        margin-bottom: 20px
+        padding: 75px 50px
