@@ -2,7 +2,6 @@
 @import '../_vars'
 
 #design-service
-    min-height: 250px
     
     &-slide
         height: auto
@@ -10,20 +9,15 @@
         width: auto
         z-index: 1
         width: 60%
-        padding: 0
 
     &-title
         width: 48px
-        padding: 0
 
         & ul li
             &:not(:first-child)::before
                 content: "- "
 
 .services
-    &__header
-        &-card
-
     &__slide
         // height: 153px
         width: 48.6%
@@ -62,3 +56,27 @@
 
 .empty-card
     display: none
+
+
+@media (min-width: 768px)
+    .services
+        &__slide
+            // height: 153px
+            width: 23.7%
+            padding: 25px 15px
+
+            &-wrapper
+                flex-wrap: nowrap
+
+    .empty-card
+        display: block
+
+    #design-service
+        padding: 0
+        &-slide
+            width: 23.7%
+            overflow: visible
+            white-space: nowrap
+
+        &-title
+            width: 23.7%

@@ -31,3 +31,42 @@
             left: 15px
             font-weight: 600
             font-size: $fs10
+
+@media (min-width: 768px)
+    .projects
+        &__card
+            padding: 47.5px 0
+        &__title
+            margin-bottom: 47.5pxpx
+            padding: 0 50px
+        &__slides-wrapper
+            padding: 0 20px
+            max-height: 340px
+            flex-direction: row
+            justify-content: space-evenly
+
+        &__slide
+            position: relative
+            width: 47.5%
+
+            &-img
+                object-fit: cover
+                border-radius: 30px
+
+            &-title
+                position: absolute
+                top: 45px
+                left: 30px
+                font-weight: 600
+                font-size: $fs10
+
+
+@media (min-width: 1000px)
+    .projects
+        &__card
+            padding: 75px 0
+        &__title
+            margin-bottom: 75px
+            padding: 0 50px
+        &__slides-wrapper
+            padding: 0 20px

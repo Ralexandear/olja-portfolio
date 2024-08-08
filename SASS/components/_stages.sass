@@ -2,7 +2,6 @@
 
 .stages
     &__card
-        // height: 770px
         display: flex
         flex-direction: column
         justify-content: space-between
@@ -19,3 +18,12 @@
             &-number
                 font-size: $fs18
                 font-weight: 600
+
+@media (min-width: 1200px)
+    .stages
+        &__title
+            margin-bottom: 45px
+        &__list
+            &-element
+                font-size: $fs10
+                margin-bottom: 30px

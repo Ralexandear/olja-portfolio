@@ -12,7 +12,6 @@
             display: flex
             flex-direction: column
             justify-content: space-between
-            gap: 10px
 
     &__list li
         &:last-child
@@ -20,3 +19,33 @@
         & a
             font-size: $fs10
             text-decoration: underline
+
+@media (min-width: 768px)
+    .contacts
+        &__row-wrapper
+            height: 600px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+        &__description
+            margin-bottom: 45px
+        &__title
+            margin-bottom: 45px
+
+        &__wrapper
+            &.right-wrapper
+                display: flex
+                padding: 10px
+
+
+                & img
+                    display: block
+                    border-radius: 30px
+                    max-width: 100%
+                    margin: 0 auto
+        &__list li
+            margin-bottom: 30px
+            & a
+                font-size: $fs50
+         
