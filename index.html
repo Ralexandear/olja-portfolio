@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,16 @@
 <body>
   <nav class="aa">
     <div class="navbar card radius-10">
-      <ul>
-        <li> <a href="#">Проекты</a> </li>
-        <li> <a href="#">Услуги</a> </li>
-        <li> <a href="#">Этапы работы</a> </li>
-        <li> <a href="#">Контакты</a> </li>
+      <ul class="navbar__list">
+        <li class="navbar__list-element" data-role="link" data-href="#projects">Проекты</li>
+        <li class="navbar__list-element"  data-role="link" data-href="#services">Услуги</li>
+        <li class="navbar__list-element"  data-role="link" data-href="#stages">Этапы работы</li>
+        <li class="navbar__list-element"  data-role="link" data-href="#contacts">Контакты</li>
+        <li class="navbar__list-element"  data-role="link" data-href="#contacts">Меню</li>
       </ul>
     </div>
   </nav>
+
   <section class="about-me">
     <div class="about-me__box">
       <div class="about-me__wrapper left-wrapper">
@@ -33,7 +35,7 @@
                 web design
               </div>
            
-              <div class="about-me__tag radius-10">
+              <div class="about-me__tag radius-10" id="ux-tag">
                 ux.ui
               </div>
   
@@ -49,20 +51,21 @@
               <h3 class="about-me__welcome-note fs-18">
                 помогаю создавать удобные,<br>отзывчивые сайты
               </h3>          
-  
-            <button class="about-me__discuss-btn radius-20 fs-18" >
-              Обсудить проект
-            </button>
+              <button class="about-me__discuss-btn radius-20 fs-18"  data-role="link" data-href="#contacts">
+                Обсудить проект
+              </button>
           <!-- </div> -->
         </div>
 
         <div class="about-me__pretentios-notes card">
-          <p class="about-me__pretentios-note fs-18">
-            уметь тонко чувствовать другого человека, его настроения и желания, а также видеть прекрасное во всём - мои главные инструменты в работе
-          </p>
-          <p class="about-me__pretentios-note fs-18">
-            это значит, что ты будешь услышан, понят, а твои задумки<br>по-максимуму реализованы
-          </p>
+          <div>
+            <p class="about-me__pretentios-note fs-18">
+              уметь тонко чувствовать другого человека, его настроения и желания, а также видеть прекрасное во всём - мои главные инструменты в работе
+            </p>
+            <p class="about-me__pretentios-note fs-18">
+              это значит, что ты будешь услышан, понят, а твои задумки<br>по-максимуму реализованы
+            </p>
+          </div>
         </div>
       </div>
       <div class="about-me__wrapper right-wrapper">
@@ -73,8 +76,8 @@
     </div>
   </section>
 
-  <section class="projects">
-    <div class="card projects__card">
+  <section class="projects" id="projects">
+    <div class="card projects__card radius-20">
       <div class="projects__wrapper">
         <h2 class="projects__title">некоторые проекты</h2>
         <div class="projects__slides-wrapper">
@@ -91,8 +94,8 @@
     </div>
   </section>
 
-  <section class="services">
-    <div class="services__header-card card radius-30">
+  <section class="services" id="services">
+    <div class="services__header-card card">
       <h2 class="services__header-title">услуги</h2>
     </div>
     <div class="services__slide-wrapper">
@@ -137,26 +140,26 @@
         <p class="services__slide-price">500р/час</p>
       </div>
     </div>
-    <div class="services__slide-wrapper card">
-      <div class="services__slide card">
-        <h4 class="services__slide-title">дизайн сайта<br>без верски</h4>
+    <div class="services__slide-wrapper card" id="design-service">
+      <div class="services__slide card" id="design-service-title">
+        <h4 class="services__slide-title">дизайн сайта без верски</h4>
       </div>
-      <div class="services__slide" id="service__website-design">
+      <div class="services__slide card" id="service__website-design">
         <ul class="services__slide-list">
           <li>подготовлю макет:</li>
           <li>проведу анализ ЦА и конкурентов ниши</li>
           <li>создам прототип и дизайн</li>
           <li>сделаю адаптацию под телефон и планшет</li>
-          <li>проставлю коментарии по макету<br>для верстальщика</li>
+          <li>проставлю коментарии по макету для верстальщика</li>
         </ul>
         <p class="services__slide-price">от 20.000р</p>
       </div>
-      <div class="services__slide card" hidden></div>
-      <div class="services__slide card" hidden></div>
+      <div class="services__slide card empty-card" hidden></div>
+      <div class="services__slide card empty-card" hidden></div>
     </div>
   </section>
 
-  <section class="stages">
+  <section class="stages" id="stages">
     <div class="stages__card card">
       <h2 class="stages__title">этапы работы</h2>
       <ul class="stages__list">
@@ -191,14 +194,15 @@
       </ul>
     </div>
   </section>
-  <section class="contacts">
+
+  <section class="contacts" id="contacts">
     <div class="contacts__row-wrapper">
       <div class="contacts__wrapper left-wrapper card">
         <h2 class="contacts__title">создадим прекрасное вместе?</h2>
         <p class="contacts__description">для обсуждения проекта свяжись со мной<br>любым удобным способом</p>
         <ul class="contacts__list">
-          <li><a href="">telegram</a></li>
-          <li><a href="">whatsapp</a></li>
+          <li><a href="https://t.me/saamoilova_it">telegram</a></li>
+          <!-- <li><a href="">whatsapp</a></li> -->
           <li><a href="mailto:saaamoilova@gmail.com">e-mail</a></li>
         </ul>
       </div>
@@ -206,14 +210,15 @@
         <img src="./static/img/contact_photo.png" alt="">
       </div>
     </div>
-  </section>
+  </section> 
+
   <section class="footer">
     <div class="footer__wrapper card">
       <div class="footer__card-half">
         <p class="footer__copyrights">© 2023 Все права защищены.  Самойлова Оля | Сайт-визитка</p>
         <a href="#" class="footer__politics">Политика конфиденциальности</a>
       </div>
-      <div class="footer__card-half">
+      <div class="footer__card-half navbar">
         <nav class="footer__navbar">
           <ul class="footer__navbar-list">
             <li><a href="#">проекты</a></li>

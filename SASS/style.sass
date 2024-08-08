@@ -1,330 +1,335 @@
-$bg_color: #B08298
-$card_color: #F5F4F0
-$black_color: #3F4445
+@import './vars'
+
+$fs10: calc(10px + 0.5vw)
+$fs18: calc(18px + 0.5vw)
 
 *
     box-sizing: border-box
+    line-height: 120%!important
+
 
 
 body
     background: $bg_color
     background-image: url("../static/img/background.png")
-    padding-top: 20px
     color: $black_color
-    max-width: 1200px
-    margin: 0 auto
     font-family: Comfortaa, sans-serif
+    overflow-x: hidden
+    max-width: 420px
+    min-width: 320px
+    margin: 0 auto
+    padding: 10px
 
-
-.fs-18
-    font-size: 18px
 
 p
-    font-size: 18px
-    word-break: normal
-    line-height: 120%
+    font-size: $fs10
 
 
-h2
-    font-size: 50px
-    line-height: 0px
-    line-height: 120%
+h2, h3
+    font-size: $fs18
 
-
-h3
-    font-size: 18px
-    line-height: 120%
-
-
-
-
-.card
-    background: $card_color
-    border-radius: 30px
-    margin-bottom: 20px
-    // padding-left: 50px
-    // padding-right: 50px
-
-.radius-10
-    border-radius: 10px
-
-.radius-20
-    border-radius: 20px
-
-.radius-30
-    border-radius: 30px
 
 
 a
     text-decoration: none
     color: $black_color
-    font-size: 18px
+    font-size: $fs18
 img
     display: block
     object-fit: cover
-    // border: 0
+
+
+
+.card
+    background: $card_color
+    border-radius: 20px
+    margin-bottom: 10px
+    padding: 30px 20px
+
+ 
+    // padding-left: 50px
+    // padding-right: 50px
+
+
+
     
 
 .navbar
+    width: 100%
     height: 50px
     display: flex
     align-items: center
     justify-content: center
 
-
-
-    // & ul
-    //     display: inline
-    & li
-        display: inline
-        margin-right: 40px
-
+    &__list-element
+        display: none
+        
         &:last-child
-            margin: 0
+            display: block
 
-.left-wrapper
-    width: 720px
     
-.right-wrapper
-    width: 460px
-
-.photo-wrapper
-    display: flex
-    padding: 20px 0
-    justify-content: center
-
-    & img
-        display: block
-        max-width: 410px
-        height: auto
-        object-fit: cover
-
 .about-me
     &__box
         display: flex
-        justify-content: space-between
-        flex-wrap: wrap-reverse
+        flex-direction: column
+        position: relative
+        // gap: 10px
     
 
 
     &__tags
         display: flex
-        flex-direction: row
-        margin-bottom: 40px
+        flex-direction: column
+        align-items: flex-end
+        position: absolute
+        top: 50px
+        right: 6px
+        gap: 10px
+        z-index: 1
+
+        @media (min-width: 340px)
+            right: 20px
+
+
 
     &__tag
-        padding: 15px 35px
-        margin-right: 10px
+        white-space: nowrap
+        padding: 5px 12px
         border-color: $bg_color
         border-width: 1px
         border-style: solid
-        font-size: 12px
+        font-size: $fs10
+        text-align: right
+        border-radius: 5px
+     
 
-        &:last-child
-            margin: 0
+        &#ux-tag
+            order: 1
     
       
 
     &__welcome
-        &-card
-            height: 620px
-            padding: 100px 50px
-
+            
         &-text
-            font-size: 40px
-            margin-bottom: 30px
+            margin-top: 0
+            padding-top: 230px
+            font-size: 12px
+            margin-bottom: 7px
             line-height: 120%
 
+            @media (min-width: 340px)
+                padding-top : 315px
+
             & span
-                font-size: 50px
+                font-size: $fs18
                 font-weight: 500
         
         &-note
-            margin-bottom: 60px
+            margin-bottom: 30px
+            font-size: $fs10
 
     &__discuss-btn
-        display: block
         width: 100%
-        height: 90px
-        
+        height: 50px
+        border-radius: 15px
         background: $bg_color
         border-width: 0
         color: $card_color
         font-weight: 500
 
     &__pretentios-notes
-        min-height: 315px
+        // padding: 15px
         display: flex
         flex-direction: column
-        padding-left: 50px
         justify-content: center
+        // justify-content: space-evenly
 
 
 
     &__pretentios-note
-        margin-bottom: 40px
+        padding-right: 20px
+        margin-bottom: 18px
         &:last-child
             margin: 0
 
     &__photo-wrapper
-        height: 620px
+        height: 212px
         display: flex
-        padding: 20px 0
         justify-content: center
-        position: sticky
+        position: absolute
         top: 20px
+        left: 20px
+        padding: 0
 
+        @media (min-width: 340px)
+            height: 300px
+
+        
 
         & img
             display: block
+            width: 100%
             max-width: 410px
             height: auto
             object-fit: cover
         
 .projects
+    &__title
+        margin-bottom: 20px
     &__card
-        height: 610px
-        padding: 75px 0
 
     &__wrapper
-        height: 100%
         display: flex
         flex-direction: column
         justify-content: space-between
+        flex-wrap: wrap
 
-    &__title
-        padding-left: 50px
 
     &__slides-wrapper
-        height: 340px
         display: flex
-        flex-direction: row
-        justify-content: space-evenly
+        flex-direction: column
+        gap: 10px
+        // justify-content: space-evenly
 
     &__slide
-        width: 570px
-        height: 100%
+        width: 100%
         position: relative
-        overflow: hidden
 
         &-img
-            height: 100%
+            width: 100%
+            object-fit: cover
         
         &-title
             position: absolute
-            top: 0
-            left: 0
-            right: 0
-            padding-left: 30px
-            padding-top: 50px
-            font-weight: 500
+            top: 15px
+            left: 15px
+            font-weight: 600
+            font-size: $fs10
     
+#design-service-title
+    width: 48px
+    padding: 0
+
+#service__website-design
+    padding-right: 0
+    width: auto
+    z-index: 1
+    position: absolute
+    left: 93px
+    right: 20px
+    padding: 0
+    
+
+
+    
+    & ul li
+        &:not(:first-child)::before
+            content: "- "
 
 .services
     &__header
         &-card
-            height: 190px
+            height: 75px
             display: flex
             flex-direction: column
             justify-content: center
-        &-title
-            padding-left: 50px
 
-    &__slide-wrapper
-        height: 300px
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        margin-bottom: 20px
     
     &__slide
-        height: 100%
-        width: 285px
-        padding: 50px 40px
+        height: 153px
+        width: 49%
+        padding: 15px
         display: flex
         flex-direction: column
         justify-content: space-between
 
+        &-wrapper
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            flex-wrap: wrap
+            position: relative
+            height: auto
+        
+
         &-title, &-price
             font-weight: 600
-            font-size: 20px
-            line-height: 120%
+            font-size: $fs10
 
         &-list
-            line-height: 120%
-            
             & li
-                font-size: 16px
+                font-size: $fs10
                 
                 &:first-child::before
                     content: "/"
 
-    &__design-card
-        height: 300px
-        background: black
 
 
 .stages
     &__card
-        height: 770px
-        padding: 50px 75px
+        // height: 770px
         display: flex
         flex-direction: column
         justify-content: space-between
+    &__title
+        margin-bottom: 20px
     &__list
         &-element
-            font-size: 18px
-            margin-bottom: 35px
+            font-size: $fs10
+            margin-bottom: 15px
             
             &:last-child
                 margin: 0
             
             &-number
-                font-size: 50px
+                font-size: $fs18
                 font-weight: 600
 
 .contacts
-    &__row-wrapper
-        height: 600px
-        display: flex
-        flex-direction: row
-        justify-content: space-between
+       
+
+    &__title
+        margin-bottom: 10px
         
     &__wrapper
-        &.right-wrapper img
-            width: 420px
+        &.right-wrapper
+            display: none
 
         &.left-wrapper
-            padding: 75px 50px
             display: flex
             flex-direction: column
             justify-content: space-between
+            gap: 10px
 
     &__list li
-        margin-bottom: 25px
         &:last-child
             margin: 0
         & a
-            font-size: 50px
+            font-size: $fs10
             text-decoration: underline
 
 .footer
     &__wrapper
-        height: 250px
         display: flex
-
+        flex-direction: column
+        gap: 20px
 
     &__card-half
-        padding: 75px 50px
-        width: 50%
         height: 100%
+        margin-bottom: 10px
+
+
+        &.navbar
+            order: -1
+            justify-content: flex-start
+            
 
         & p,a
-            font-size: 14px
-            margin-bottom: 20px
+            font-size: 7px
 
             &:last-child
                 margin: 0
+               
 
     &__politics 
         text-decoration: underline
@@ -337,24 +342,12 @@ img
                 margin: 0
 
             & a
-                font-size: 18px
+                font-size: $fs18
 
 
 
 
+.empty-card
+    display: none
 
-#service__website-design
-    padding-right: 0
-    overflow: visible
-    white-space: nowrap
-    z-index: 1
-    
-    & ul li
-        &:not(:first-child)::before
-            content: "- "
       
-
-
-        
-
-        
